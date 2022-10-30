@@ -1,0 +1,212 @@
+/* reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 100%;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* todo */
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-card {
+  width: 500px;
+  height: auto;
+  border: 1px solid #EDEDED;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 30px 10px rgba(237, 237, 237, 65%);
+}
+
+.todo-header {
+  padding: 30px;
+  border-bottom: 1px solid #7b8646;
+  background: #94a157;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.date {
+  font-size: .85rem;
+  color: #252525;
+}
+
+.title {
+  font-size: 1.4rem;
+  color: #252525;
+  line-height: 1.6;
+}
+
+.todo-content {
+  
+}
+
+.form-container {
+  padding: 30px 30px 15px;
+  border-bottom: 1px solid #EDEDED;
+}
+
+.form-group {
+  position: relative;
+}
+
+.add-task {
+  width: 100%;
+  height: auto;
+  padding: 10px 15px;
+  border: 1px solid #EDEDED;
+}
+
+.add-task:focus {
+  border: 1px solid #EDEDED;
+  outline: none;
+}
+
+.icon-box {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+}
+
+.plus-icon {
+  position: relative;
+  
+}
+
+.plus-icon::before {
+  width: 2px;
+  height: 12px;
+  display: block;
+  background: #ece9e9;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+}
+
+.plus-icon::after {
+  width: 12px;
+  height: 2;
+  display: block;
+  background: #ece9e9;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+}
+
+.empty-state {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.empty-state.active {
+  display: flex;
+}
+
+.empty-state span:first-child {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.todo-list {
+  padding: 15px 30px;
+}
+
+.task-item {
+  cursor: pointer;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.task-value {
+  flex-basis: 100%;
+}
+
+.task-value.done {
+  color: #6bcb88;
+  text-decoration: line-through;
+}
+
+.task-item:last-child {
+  margin-bottom: 0;
+}
+
+
+.button {
+  border: 0;
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.button > svg {
+  fill: white;
+  pointer-events: none;
+}
+
+.button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.button-done {
+  background: #6bcb88;
+}
+
+
+.button-delete {
+  background: #f15454;
+}
+
+
+.done {
+  text-decoration: line-through;
+  color: #0b7a27;
+}
+
+.message-box {
+  margin-top: 15px;
+}
+
+.error {
+  border: 1px solid #9c3131;
+  border-radius: 5px;
+  padding: 15px;
+  color: #9c3131;
+  background: rgba(252, 135, 135, 0.3);
+  margin-bottom: 15px;
+}
